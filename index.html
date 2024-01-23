@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    .circle{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      height:100px;
+      width:100px;
+      
+      border-radius:50%;
+      background-image:linear-gradient(hsl(256, 80%, 31%),hsl(234, 69%, 57%));
+
+    }
+
+    .bigNumber{
+
+      color:white;
+      font-size:50px;
+    }
+
+    .smallNumber{
+      color:hsl(210, 1%, 72%);
+      font-size:12px;
+    }
+
+    .mediumNumber{
+      color:white;
+      font-size:30px;
+      text-align:center;
+      line-height:0px;
+      
+    }
+    body{
+      font-size:18px;
+      font-family:'Hanken Grotesk';
+    }
+
+    .normalText{
+      text-align: center;
+      font-size:15px;
+      color:hsl(210, 1%, 72%);
+    }
+
+    .firstText{
+      color:hsl(210, 1%, 72%);
+    }
+
+    .redBar{
+
+      background-color:rgb(226, 170, 170);
+      display:flex;
+      gap:10px;
+      height:40px;
+      width:220px;
+      border-radius:15px;
+
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+    }
+    .orangeBar{
+
+      background-color:rgb(226, 211, 170);
+
+      gap:10px;
+      height:40px;
+      width:220px;
+      border-radius:15px;
+
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+    }
+    .greenBar{
+      height:40px;
+      width:220px;
+      gap:10px;
+      border-radius:15px;
+      background-color:rgb(170, 226, 170);
+      display:flex;
+      align-items:center;
+
+      justify-content:flex-start;
+    }
+
+    .blueBar{
+      display:flex;
+      gap:10px;
+      height:40px;
+      width:220px;
+      border-radius:15px;
+      background-color:rgb(170, 208, 226);
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+
+    }
+
+    .summary{
+      text-align:left;
+      padding-left:7px;
+    }
+
+    .anotherBorder{
+
+      margin:10px;
+      height:320px;
+  
+    }
+
+    .continueBar{
+      
+      height:40px;
+      width:220px;
+      border-radius:15px;
+      background-color:rgb(4, 3, 61);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:20px;
+    }
+
+    .more{
+      display:flex;
+      row-gap :10px;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+    }
+
+    .continueText{
+      color:white;
+    }
+
+    .percentages{
+      color:hsl(0, 0%, 39%);
+      margin-left:auto;
+      margin-right:10px;
+    }
+
+    .fixIMG{
+      margin-top:5px;
+    }
+
+    .imgDesc{
+      margin-left:10px;
+    }
+
+    .boldedBlack{
+      color:black;
+    }
+
+      .container{
+
+        position: absolute;
+        display:flex;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        box-shadow:15px 15px 30px grey;
+        border-radius:20px;
+      }
+      .item_1{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+
+        border-top-left-radius:15px;
+        border-bottom-left-radius:15px;
+        height:350px;
+        width:250px;
+        background-color: hsl(234, 69%, 57%);
+      }
+      .item_2{
+
+        border-top-right-radius:15px;
+        border-bottom-right-radius:15px;
+        height:350px;
+        width:250px;
+      }
+
+
+    
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item_1">
+      <p class="firstText">Your Result</p>
+      <div class="circle">
+        <div class="bigNumber">76</div>
+        
+        <div class="smallNumber">of 100</div>
+      </div>
+      <div>
+        <p class="mediumNumber">Great</p>
+        <p class="normalText">You scored higher than 65% of<br>the people who have taken<br>these tests.</p>
+      </div>
+    </div>
+    <div class="item_2">
+      <div class="anotherBorder">
+      <div class="new">
+        <p class="summary">Summary</p>
+      </div>
+      <div class="more">
+        <div class="redBar">
+          <div class="imgDesc">
+            <img src="assets/images/icon-reaction.svg" class="fixIMG">
+          </div>
+          <div class="descText" style="color:red;">Reaction</div>
+          <p class="percentages"><b class="boldedBlack">80&nbsp;</b>/100</p>
+
+        </div>
+      
+        <div class="orangeBar">
+          <div class="imgDesc">
+            <img src="assets/images/icon-memory.svg" class="fixIMG">
+          </div>
+          <div class="descText" style="color:orange;">Memory</div>
+          <p class="percentages"><b class="boldedBlack">92&nbsp;</b>/100</p>
+ 
+
+        </div>
+      
+        <div class="greenBar">
+          <div class="imgDesc">
+            <img src="assets/images/icon-verbal.svg" class="fixIMG">
+          </div>
+          <div class="descText" style="color:green;">Verbal</div>
+          <p class="percentages"><b class="boldedBlack">61&nbsp;</b>/100</p>
+ 
+        </div>
+    
+      
+        <div class="blueBar">
+          <div class="imgDesc">
+            <img src="assets/images/icon-visual.svg" class="fixIMG">
+          </div>
+          <div class="descText" style="color:blue;">Visual</div>
+          
+          <p class="percentages"><b class="boldedBlack">72</b> / 100</p>
+
+        </div>
+      
+        <div class="continueBar">
+          <p class="continueText">Continue</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
